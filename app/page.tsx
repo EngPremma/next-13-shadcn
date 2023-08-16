@@ -1,7 +1,11 @@
+'use client';
+
+import { Button } from '@/components/ui/button';
+
 export default function Home() {
   return (
     <main>
-      <h1 className=''>next 13</h1>
+      <Button variant='default'>click me</Button>
     </main>
   );
 }
