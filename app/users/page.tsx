@@ -1,5 +1,9 @@
+'use client';
+
+import UserList from '@/containers/user-list';
+
 const Users = () => {
-  return <div>Users</div>;
+  return <UserList />;
 };
 
 export default Users;
