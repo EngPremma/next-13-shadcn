@@ -17,7 +17,8 @@
         "semi": true,
         "arrowParens": "avoid"
       }
-    ]
+    ],
+    "react/prop-types": "off"
   },
   "globals": {
     "React": "writable"
