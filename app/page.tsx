@@ -1,15 +1,39 @@
-export default function Home() {
+import Link from 'next/link';
+
+const products = [
+  {
+    name: 'T-shirt',
+    id: 't-shirrec34',
+  },
+  {
+    name: 'Pants',
+    id: 'dpatne',
+  },
+  {
+    name: 'Pants',
+    id: 'ddfpatne',
+  },
+  {
+    name: 'Pants',
+    id: 'ddcxcfpatne',
+  },
+];
+
+const Home = () => {
   return (
     <main>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis tortor euismod dolor iaculis
-      pellentesque a non eros. Nunc in ex molestie, dapibus massa ut, facilisis enim. Aliquam egestas
-      convallis libero, in elementum eros laoreet sit amet. Nulla vestibulum, orci vel semper sodales, quam
-      risus elementum leo, eget pulvinar eros nibh vitae justo. Morbi fermentum sem eu ipsum ornare, et
-      lacinia tortor iaculis. Vestibulum lobortis ante vitae leo posuere vehicula. Suspendisse vel suscipit
-      velit. In at ornare risus. Sed eget lectus dictum felis dignissim malesuada. Suspendisse ornare laoreet
-      pulvinar. Proin sollicitudin neque nunc, ac elementum ligula iaculis vel. Duis eu ipsum est. Quisque at
-      quam sapien. Mauris posuere gravida nunc vitae venenatis. Quisque at tempus justo. In auctor ac mi vitae
-      bibendum.
+      <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3'>
+        {products.map(product => (
+          <div key={product.id} className='rounded-lg bg-gray-300 p-2 flex justify-center flex-col'>
+            <p className='text-center text-md mb-2'>{product.name}</p>
+            <Link href={`/product/${product.id}`} className='bg-blue-700 text-white rounded-md text-center'>
+              View Detail
+            </Link>
+          </div>
+        ))}
+      </div>
     </main>
   );
-}
+};
+
+export default Home;
