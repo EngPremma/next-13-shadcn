@@ -20,8 +20,8 @@ const ProductDetail = ({ params, searchParams }: Props) => {
 
   return (
     <div>
-      ProductDetail
-      {params.id}
+      <p className='text-3xl'>ProductDetail</p>
+      <p className='mb-2'>Product ID: {params.id}</p>
       <div className='flex space-x-2'>
         {colors.map(color => {
           const isSelected = selectedColor === color.value ? 'border-blue-600' : '';
