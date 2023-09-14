@@ -1,16 +1,21 @@
 import Link from 'next/link';
 
+const menus = [
+  { label: 'Home', href: '/' },
+  { label: 'Users', href: '/users' },
+  { label: 'Todos', href: '/todos' },
+];
+
 const Nav = () => {
   return (
     <header>
       <nav className='mb-5'>
         <ul className='flex justify-around p-5 bg-slate-600 text-zinc-50'>
-          <li className='hover:underline'>
-            <Link href='/'>Home</Link>
-          </li>
-          <li>
-            <Link href='/users'>Users</Link>
-          </li>
+          {menus.map(menu => (
+            <Link key={menu.href} href={menu.href} className='hover:underline'>
+              {menu.label}
+            </Link>
+          ))}
         </ul>
       </nav>
     </header>
