@@ -1,10 +1,11 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Inter } from 'next/font/google';
-
 const inter = Inter({ subsets: ['latin'] });
 
 import Nav from '@/components/nav';
+import ReactQueryProvider from '@/app/react-query-provider';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +16,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <Nav />
-        <main className='container'>{children}</main>
+        <ReactQueryProvider>
+          <ReactQueryDevtools initialIsOpen={false} />
+          <Nav />
+          <main className='container'>{children}</main>
+        </ReactQueryProvider>
       </body>
     </html>
   );
