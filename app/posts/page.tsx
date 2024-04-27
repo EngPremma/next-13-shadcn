@@ -17,7 +17,13 @@ const Posts = () => {
     const fetchPosts = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts', { cache: 'force-cache' });
+        // const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+        //   cache: 'force-cache',
+        //   headers: {
+        //     API_KEY: 'john',
+        //   },
+        // });
+        const response = await fetch('/posts/api', { cache: 'force-cache' });
         const data: Post[] = await response.json();
         setPosts(data);
         setIsLoading(false);
