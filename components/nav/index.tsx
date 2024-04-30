@@ -13,6 +13,10 @@ const menuItems: { name: string; href: string }[] = [
     name: 'Posts',
     href: '/posts',
   },
+  {
+    name: 'Dashboard',
+    href: '/dashboard',
+  },
 ];
 
 const Nav = () => {
