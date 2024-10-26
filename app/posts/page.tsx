@@ -1,4 +1,6 @@
-type Post = {
+import Link from 'next/link';
+
+export type Post = {
   userId: number;
   id: number;
   title: string;
@@ -20,12 +22,12 @@ const Posts = async () => {
   return (
     <div className='my-4 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3'>
       {posts.map(post => (
-        <div key={post.id} className='rounded bg-blue-500 p-3 text-white'>
+        <Link key={post.id} href={`/post/${post.id}`} className='rounded bg-blue-500 p-3 text-white'>
           <article className='text-wrap'>
             <h3 className='text-xl font-bold mb-2'>{post.title}</h3>
             <p className='font-normal text-slate-100 text-sm'>{post.body}</p>
           </article>
-        </div>
+        </Link>
       ))}
     </div>
   );

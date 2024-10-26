@@ -1,10 +1,8 @@
-import React from 'react';
-
 const mockFetchData = () => {
   return new Promise(resolve => {
     setTimeout(() => {
       resolve('data');
-    }, 2000);
+    }, 5000);
   });
 };
 

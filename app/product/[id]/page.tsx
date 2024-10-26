@@ -30,6 +30,7 @@ const ProductDetail = ({ params, searchParams }: Props) => {
               key={color.value}
               href={`?${new URLSearchParams({ color: color.value })}`}
               className={`bg-gray-300 rounded-full p-2 border-2 ${isSelected}`}
+              replace
             >
               {color.label}
             </Link>
