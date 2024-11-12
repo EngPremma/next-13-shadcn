@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import PostCard from './_components/post-card';
 
 export type Post = {
   userId: number;
@@ -21,13 +21,8 @@ const Posts = async () => {
 
   return (
     <div className='my-4 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3'>
-      {posts.map(post => (
-        <Link key={post.id} href={`/post/${post.id}`} className='rounded bg-blue-500 p-3 text-white'>
-          <article className='text-wrap'>
-            <h3 className='text-xl font-bold mb-2'>{post.title}</h3>
-            <p className='font-normal text-slate-100 text-sm'>{post.body}</p>
-          </article>
-        </Link>
+      {posts.map(({ id, body, title }) => (
+        <PostCard key={id} id={id} title={title} body={body} />
       ))}
     </div>
   );
