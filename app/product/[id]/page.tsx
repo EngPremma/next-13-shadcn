@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
 type Props = {
-  params: { id: string };
-  searchParams: {
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{
     [key: string]: string | string[] | undefined;
-  };
+  }>;
 };
 
 const colors = [
@@ -15,7 +15,9 @@ const colors = [
 
 const DEFAULT_COLOR = 'blue';
 
-const ProductDetail = ({ params, searchParams }: Props) => {
+const ProductDetail = async (props: Props) => {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const selectedColor = searchParams.color || DEFAULT_COLOR;
 
   return (
