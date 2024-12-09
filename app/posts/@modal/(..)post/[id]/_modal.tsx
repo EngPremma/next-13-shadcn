@@ -2,7 +2,7 @@
 
 import { ReactNode, useEffect, useState } from 'react';
 
-import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTitle, DialogHeader, DialogDescription } from '@/components/ui/dialog';
 import { useRouter } from 'next/navigation';
 
 type Props = {
@@ -29,7 +29,11 @@ const PostDetailModal = ({ children }: Props) => {
       }}
     >
       <DialogContent>
-        <DialogTitle>title</DialogTitle>
+        <DialogHeader hidden>
+          <DialogTitle hidden />
+          <DialogDescription hidden />
+        </DialogHeader>
+
         {children}
       </DialogContent>
     </Dialog>
