@@ -54,5 +54,11 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.0.1",
+      "@types/react-dom": "19.0.1"
+    }
   }
 }
