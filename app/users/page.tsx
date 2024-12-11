@@ -1,13 +1,13 @@
 import { Suspense } from 'react';
 
 import UserList from './_components/user-list';
-import CreatePostButton from './_components/create-post-button';
+import CreateUserForm from './_components/create-user-form';
 
 const Users = () => {
   return (
     <div className='flex flex-col items-start gap-2'>
       <h1>Users page</h1>
-      <CreatePostButton />
+      <CreateUserForm />
       <Suspense fallback={<p>Loading...</p>}>
         <UserList />
       </Suspense>

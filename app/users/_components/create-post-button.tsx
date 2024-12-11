@@ -1,10 +1,16 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { createPost } from '../_actions/create-post';
+import { useFormStatus } from 'react-dom';
 
 const CreatePostButton = () => {
-  return <Button onClick={() => createPost()}>create post</Button>;
+  const { pending } = useFormStatus();
+
+  return (
+    <Button type='submit' disabled={pending}>
+      create post
+    </Button>
+  );
 };
 
 export default CreatePostButton;
