@@ -1,5 +1,7 @@
 'use server';
 
+import { redirect } from 'next/navigation';
+
 export const createPost = async (prevState: unknown, formData: FormData) => {
   if (formData.get('username') === '') {
     return {
@@ -14,4 +16,5 @@ export const createPost = async (prevState: unknown, formData: FormData) => {
 
   const data = await res.json();
   console.log(data);
+  redirect('/');
 };
