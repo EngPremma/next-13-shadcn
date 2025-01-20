@@ -1,7 +1,5 @@
-import React from 'react';
-
 const ProductVariants = () => {
-  return <div>ProductVariants</div>;
+  return <>ProductVariants</>;
 };
 
 export default ProductVariants;

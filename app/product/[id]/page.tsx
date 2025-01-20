@@ -21,8 +21,9 @@ const ProductDetail = async (props: Props) => {
   const selectedColor = searchParams.color || DEFAULT_COLOR;
 
   return (
-    <div>
-      <p className='text-3xl'>ProductDetail</p>
+    <>
+      <p className='text-sm'>Time: {new Date().toLocaleString()}</p>
+      <p className='text-3xl font-semibold'>ProductDetail</p>
       <p className='mb-2'>Product ID: {params.id}</p>
       <div className='flex space-x-2'>
         {colors.map(color => {
@@ -39,7 +40,7 @@ const ProductDetail = async (props: Props) => {
           );
         })}
       </div>
-    </div>
+    </>
   );
 };
 
