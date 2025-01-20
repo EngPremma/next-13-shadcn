@@ -18,8 +18,8 @@
     "autoprefixer": "10.4.20",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "eslint-config-next": "15.1.4",
-    "next": "15.1.4",
+    "eslint-config-next": "15.1.5",
+    "next": "15.1.5",
     "postcss": "8.5.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
@@ -29,7 +29,7 @@
     "typescript": "5.7.3"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "3.2.3",
+    "@chromatic-com/storybook": "3.2.4",
     "@storybook/addon-essentials": "8.5.0",
     "@storybook/addon-interactions": "8.5.0",
     "@storybook/addon-onboarding": "8.5.0",
@@ -44,7 +44,7 @@
     "@typescript-eslint/parser": "^8.20.0",
     "eslint": "9.18.0",
     "eslint-config-prettier": "^10.0.1",
-    "eslint-plugin-prettier": "^5.2.2",
+    "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-storybook": "^0.11.2",
     "prettier": "^3.4.2",
